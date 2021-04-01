@@ -14,7 +14,7 @@ export default function SearchForm({setData}) {
       <form onSubmit={QuerySearch(search, setData)}>
         <label for="search">
           Search:
-          <input type="text" name="search" id="search" ></input>
+          <input type="text" name="search" id="search" onChange={e => setSearch(e.target.value)}></input>
         </label>
       </form>
     </section>

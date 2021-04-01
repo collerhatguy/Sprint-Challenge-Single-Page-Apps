@@ -15,10 +15,9 @@ export default function CharacterList() {
   useEffect(() => {
     getData(url)
   }, [])
-  console.log(data);
   return (
     <section className="character-list">
-      {/* <SearchForm setData={setData} /> */}
+      <SearchForm setData={setData} />
       {data.map(character => {
         return <CharacterCard character={character} key={character.id} />
       })}
