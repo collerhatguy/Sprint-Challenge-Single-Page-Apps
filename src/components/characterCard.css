@@ -1,0 +1,8 @@
+.charachter-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid .2em black;
+    border-radius: 9999px;
+}

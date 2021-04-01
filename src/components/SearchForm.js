@@ -1,10 +1,22 @@
 import React, { useState } from "react";
 
-export default function SearchForm() {
- 
+export default function SearchForm({setData}) {
+  const [search, setSearch] = useState();
+  const QuerySearch = (search, setData) => {
+      setData(prevData => {
+        prevData.filter(character => {
+          return character.name.includes(search);
+        })
+      })
+  }
   return (
     <section className="search-form">
-     // Add a search form here
+      <form onSubmit={QuerySearch(search, setData)}>
+        <label for="search">
+          Search:
+          <input type="text" name="search" id="search" ></input>
+        </label>
+      </form>
     </section>
   );
 }

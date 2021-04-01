@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./characterCard.css";
 export default function CharacterCard( { character }) {
   
   return <div className="charachter-card">
